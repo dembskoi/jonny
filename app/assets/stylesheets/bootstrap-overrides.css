@@ -195,9 +195,9 @@ input[type="color"],
 .navbar { margin-bottom: 0; }
 .navbar .nav { float: right; margin-right: 0; }
 .navbar-inner { background: transparent; filter:0; border: none; padding: 0; }
-.navbar .nav > li {background: url(../img/menu-li.png) no-repeat; min-width: 135px; text-align: center; }
-.navbar .nav > li.first { background: url(../img/menu-li-first.png) no-repeat; }
-.dropdown ul li { background: url(../img/menu-ul-ul-li.png) repeat-x !important; }
+.navbar .nav > li {background: url(/assets/menu-li.png) no-repeat; min-width: 135px; text-align: center; }
+.navbar .nav > li.first { background: url(/assets/menu-li-first.png) no-repeat; }
+.dropdown ul li { background: url(/assets/menu-ul-ul-li.png) repeat-x !important; }
 .dropdown ul li a { height: 18px; line-height: 18px; font-size: 13px; margin-bottom: 0; }
 .navbar .nav > li > a { color: #007C69; text-transform: uppercase; font-size: 14px; padding: 0 0 0 15px; vertical-align: middle; height: 40px; line-height: 40px; }
 .navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav > li > a:hover { background: none; color:#D42915; }
@@ -213,8 +213,8 @@ a.menu:after, .dropdown-toggle:after { content: none; }
 
 /* Carousel */
 .carousel { margin-bottom: 0; }
-.carousel-control { background: url(../img/arrows.png); border: 0; width: 42px; height: 42px; top:50%; opacity: 0.35; }
-.carousel-control.right { background: url(../img/arrows.png) 43px 0; }
+.carousel-control { background: url(/assets/arrows.png); border: 0; width: 42px; height: 42px; top:50%; opacity: 0.35; }
+.carousel-control.right { background: url(/assets/arrows.png) 43px 0; }
 .carousel-caption { padding-top: 2px; }
 .carousel-caption h1, .carousel-caption h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption h5, .carousel-caption h6 { margin-bottom: 5px; }
 .carousel-caption h1, .carousel-caption h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption h5, .carousel-caption h6 { margin-top: 10px; }  
@@ -242,7 +242,7 @@ form { margin-bottom: 0; }
 .pagination a:hover, .pagination .active a { background: #33a291; color: #fff; }
 
 /* Accordian */
-.accordion-heading { background: url(../img/tab.png) repeat-x; }
+.accordion-heading { background: url(/assets/tab.png) repeat-x; }
 .accordion-toggle { color:#555 !important; }
 .accordion-toggle:hover { background: #eee; }
 .accordion p { margin-top: 0; }
@@ -253,10 +253,10 @@ form { margin-bottom: 0; }
 .breadcrumb { background: none; border: 0; margin-bottom: 0; padding-left: 0; padding: 0 15px 0 0; filter: none; }
 .breadcrumb li, .breadcrumb li a, .breadcrumb .active { color: #fff; }
 .breadcrumb li a:hover { color: #02584A; }
-.breadcrumb .title { margin-right: 10px; background: url(../img/br-title.png) no-repeat top; width: 117px; height: 29px; text-align: center; }
+.breadcrumb .title { margin-right: 10px; background: url(/assets/br-title.png) no-repeat top; width: 117px; height: 29px; text-align: center; }
 
 /* Tabs */
-.nav-tabs { border-bottom: 1px solid #eee; background: url(../img/tab.png) repeat-x; }
+.nav-tabs { border-bottom: 1px solid #eee; background: url(/assets/tab.png) repeat-x; }
 .nav-tabs > li { border-right: 1px solid #eee; } 
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover { border:0; border-top: 1px solid #eee; border-bottom: 0; }
 .nav-tabs > li > a:hover { border-color: #eee; background: #eee; color:#000; }
