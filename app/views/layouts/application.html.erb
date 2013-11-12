@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Гомеопатическая поликлиника №82</title>
+  <title>Последние новости гомеопатической поликилиники №82</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.carousel').carousel({interval: 7000 });
+    });
+  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,20 +22,6 @@
           <%= link_to(image_tag("logo.png"), root_path) %>
         </div>
         <!-- End Logo -->
-
-        <!-- Social menu -->
-        <div class="span6" id="social">
-          <ul class="social">
-            <li class="twitter">
-              <a target="_blank" href="#">&nbsp;</a>
-            </li>
-            <li class="facebook">
-              <a target="_blank" href="#">&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <!-- End Social Menu -->
-
       </div>
       <!--/.row-fluid -->
     </div>
@@ -81,30 +72,14 @@
                   <li><%= link_to 'Процедуры', "#" %></li>
                 </ul>
               </li>
-              <li><%= link_to 'Контакты', "#" %></li>
+              <li><%= link_to 'Контакты', contact_us_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.navbar-inner -->
       </div><!--/.navbar -->
       <!-- End Main Menu -->
 
-      <!-- Home page Carousel -->
-      <div class="frame">
-        <div id="myCarousel" class="carousel slide">
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="active item"><%= image_tag("slider/1.png") %></div>
-            <div class="item"><%= image_tag("slider/2.png") %></div>
-            <div class="item"><%= image_tag("slider/3.png") %></div>
-            <div class="item"><%= image_tag("slider/4.png") %></div>
-          </div><!--/.carousel-inner -->
-
-          <!-- Carousel nav -->
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
-        </div><!--/#myCarousel -->
-      </div><!--/.frame -->
-      <!-- End Home page Carousel -->
+    <%= yield :carousel %>
 
     </div><!--/.container -->
   </section><!--/#top -->
@@ -116,54 +91,15 @@
   <footer>
     <div class="container">
       <div class="row-fluid">
-        <div class="span3">
+        <div class="span12">
           <ul class="nav nav-list">
-            <li class="nav-header">Contact Us</li>
-            <li><span class="label label-inverse">Telephone</span> +11 12345678</li>
-            <li><span class="label label-inverse">Fax</span> +11 78945654</li>
-            <li><span class="label label-inverse">Mobile</span> +55 45987221</li>
-            <li><span class="label label-inverse">Email</span> name@domain.com</li>
-            <li><span class="label label-inverse">Location</span> #321, Street, City</li>
+            <li class="nav-header">Контакты</li>
+            <li><span class="label label-inverse">Телефоны для записи</span> 572-79-76 / 572-79-77</li>
+            <li><span class="label label-inverse">Адрес</span> 192241, Санкт-Петербург, ул. Пражская, дом 12, корпус 1, «СПб ГУЗ Поликлиника городская №82 (гомеопатическая)»</li>
           </ul>
         </div><!--/.span3 -->
-
-        <div class="span3">
-          <ul class="nav nav-list">
-            <li class="nav-header">WEBSITE NAVIGATION</li>
-            <li><a href="#">Home Page</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services We Offer</a></li>
-            <li><a href="#">Meet Our Doctors</a></li>
-            <li><a href="#">Our Blog</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div><!--/.span3 -->
-
-        <div class="span3">
-          <ul class="nav nav-list">
-            <li class="nav-header">Social with us</li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Google Plus</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Youtube</a></li>
-          </ul>
-        </div><!--/.span3 -->
-
-        <div class="span3">
-          <ul class="nav nav-list">
-            <li class="nav-header">Sample Menu</li>
-            <li><a href="#">Menu one</a></li>
-            <li><a href="#">Menu Two</a></li>
-            <li><a href="#">Menu Three</a></li>
-            <li><a href="#">Menu Four</a></li>
-            <li><a href="#">Menu Five</a></li>
-            <li><a href="#">Menu Six</a></li>
-          </ul>
-        </div><!--/.span3 -->
-
         <div class="span12 copyright">
-          © 2012 Medical-Pro. All Rights reserved.
+          © 2013 polyclinic82. All Rights reserved.
         </div><!--/.span12 -->
       </div><!--/.row-fluid -->
     </div><!--/.container -->
