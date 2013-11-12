@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Administration</title>
+  <%= stylesheet_link_tag "administration", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='page'>
+  <div class='navbar'>
+    <div class='navbar-inner'>
+      <%= link_to 'Home', root_path, class: 'brand' %>
+      <ul class='nav nav-tabs'>
+        <li class="<%= 'active' if controller_name=='services' %>"><%= link_to 'Services', services_path %></li>
+        <li class="<%= 'active' if controller_name=='service_prices' %>"><%= link_to 'Service Prices', service_prices_path %></li>
+        <li class="<%= 'active' if controller_name=='specialties' %>"><%= link_to 'Specialties', specialties_path %></li>
+        <li class="<%= 'active' if controller_name=='doctors' %>"><%= link_to 'Doctors', doctors_path %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class='container'>
+  <%= bootstrap_flash %>
+  <%= yield %>
+</div>
+
+</body>
+</html>

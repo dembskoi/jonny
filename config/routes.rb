@@ -1,5 +1,10 @@
 Jonny::Application.routes.draw do
 
+  resources :doctors
+  resources :specialties
+  resources :service_prices
+  resources :services
+
   root :to => 'home#index'
   match 'contact_us' => 'home#contact_us'
 

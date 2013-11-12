@@ -1,0 +1,29 @@
+<h1>Listing Doctors</h1>
+
+<table class='table table-hover'>
+  <tr>
+    <th>Doctor Name</th>
+    <th>Status</th>
+    <th>Phone</th>
+    <th>Specialty</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
+  </tr>
+
+<% @doctors.each do |doctor| %>
+  <tr>
+    <td><%= doctor.name %></td>
+    <td><%= doctor.status %></td>
+    <td><%= doctor.phone %></td>
+    <td><%= link_to doctor.specialty.name, doctor.specialty %></td>
+    <td><%= link_to 'Show', doctor %></td>
+    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @doctors, renderer: BootstrapPagination::Rails %>
+
+<%= link_to 'New Doctor', new_doctor_path %>

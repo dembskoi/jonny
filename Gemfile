@@ -22,6 +22,11 @@ end
 gem 'jquery-rails'
 gem 'rails_12factor'
 
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'simple_form'
+gem "will_paginate-bootstrap", "~> 0.2.5"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

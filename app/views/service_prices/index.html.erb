@@ -1,0 +1,27 @@
+<h1>Listing Service Prices</h1>
+
+<table class='table table-hover'>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Service Name</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
+  </tr>
+
+<% @service_prices.each do |service_price| %>
+  <tr>
+    <td><%= service_price.name %></td>
+    <td><%= service_price.price %></td>
+    <td><%= link_to service_price.service.name, service_price.service %></td>
+    <td><%= link_to 'Show', service_price %></td>
+    <td><%= link_to 'Edit', edit_service_price_path(service_price) %></td>
+    <td><%= link_to 'Destroy', service_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @services, renderer: BootstrapPagination::Rails %>
+
+<%= link_to 'New Service Price', new_service_price_path %>
