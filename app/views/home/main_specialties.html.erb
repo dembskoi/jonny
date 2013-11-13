@@ -21,15 +21,24 @@
       <div class="page">
         <div class="container">
           <h3 class="tree"><%= @specialty.name %></h3>
-
-          <div class="span12">
-            <ul class="ul-1">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>Должность</th>
+              <th>Телефон</th>
+            </tr>
+            </thead>
+            <tbody>
               <% @specialty.doctors.order(:name).each do |doctor| %>
-                <li><%= "#{doctor.name} #{doctor.status} #{doctor.phone}" %></li>
+                <tr>
+                  <td><%= doctor.name %></td>
+                  <td><%= doctor.status %></td>
+                  <td><%= doctor.phone %></td>
+                </tr>
               <% end %>
-            </ul>
-          </div>
-          <!--/.span4 -->
+            </tbody>
+          </table>
 
         </div>
         <!--/.container -->
