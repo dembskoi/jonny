@@ -46,7 +46,7 @@ Jonny::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.sass, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( administration.sass )
+  config.assets.precompile += %w(administration.css)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
