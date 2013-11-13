@@ -7,6 +7,8 @@ Jonny::Application.routes.draw do
 
   root :to => 'home#index'
   match 'contact_us' => 'home#contact_us'
+  match "main_services/:id" => 'home#main_services', as: 'main_services'
+  match "main_specialties/:id" => 'home#main_specialties', as: 'main_specialties'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

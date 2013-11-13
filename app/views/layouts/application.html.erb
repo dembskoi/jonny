@@ -42,34 +42,23 @@
             <ul class="nav">
               <li class="active"><%= link_to 'Главная', root_path %></li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                   Врачи
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'Аллерголог', "#" %></li>
-                  <li><%= link_to 'Гинеколог', "#" %></li>
-                  <li><%= link_to 'Дерматолог', "#" %></li>
-                  <li><%= link_to 'Кардиолог', "#" %></li>
-                  <li><%= link_to 'Косметолог', "#" %></li>
-                  <li><%= link_to 'Невролог', "#" %></li>
-                  <li><%= link_to 'Окулист', "#" %></li>
-                  <li><%= link_to 'Отоларинголог', "#" %></li>
-                  <li><%= link_to 'Ревматолог', "#" %></li>
-                  <li><%= link_to 'Стоматолог', "#" %></li>
-                  <li><%= link_to 'Терапевт', "#" %></li>
-                  <li><%= link_to 'Уролог', "#" %></li>
-                  <li><%= link_to 'Эндокринолог', "#" %></li>
+                  <% Specialty.order(:name).each do |specialty| %>
+                    <li><%= link_to specialty.name, main_specialties_path(specialty.id) %></li>
+                  <% end %>
                 </ul>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                   Услуги
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'УЗИ', "#" %></li>
-                  <li><%= link_to 'ЭКГ', "#" %></li>
-                  <li><%= link_to 'Анализы', "#" %></li>
-                  <li><%= link_to 'Процедуры', "#" %></li>
+                  <% Service.order(:name).each do |service| %>
+                    <li><%= link_to service.name, main_services_path(service.id) %></li>
+                  <% end %>
                 </ul>
               </li>
               <li><%= link_to 'Контакты', contact_us_path %></li>

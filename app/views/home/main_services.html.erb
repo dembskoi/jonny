@@ -1,0 +1,42 @@
+<!-- Section Breadcrumbs-->
+<section id="breadcrumb">
+  <div class="b-c">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li class="title">Вы здесь</li>
+        <li><%= link_to 'Главная', root_path %><span class="divider"><%= image_tag("br-arrow.png") %></span></li>
+        <li><%= link_to 'Услуги', 'javascript:void(0)' %><span class="divider"><%= image_tag("br-arrow.png") %></span></li>
+        <li><%= link_to @service.name, 'javascript:void(0)' %></li>
+      </ul>
+    </div> <!--/.container -->
+  </div> <!--/.b-c -->
+</section> <!--#breadcrumb -->
+<!-- End Section Breadcrumb -->
+
+<!-- Section content -->
+<section id="content" class="typography">
+  <div class="container">
+    <div class="row-fluid">
+      <!-- Unordered Lists -->
+      <div class="page">
+        <div class="container">
+          <h3 class="tree"><%= @service.name %></h3>
+
+          <div class="span12">
+            <ul class="ul-1">
+              <% @service.service_prices.order(:name).each do |sp| %>
+                <li><%= "#{sp.name} #{sp.price}" %></li>
+              <% end %>
+            </ul>
+          </div>
+          <!--/.span4 -->
+
+        </div>
+        <!--/.container -->
+      </div>
+      <!--/.page -->
+      <!-- End Unordered Lists -->
+    </div>
+    <!--/.container -->
+  </div>
+</section>
