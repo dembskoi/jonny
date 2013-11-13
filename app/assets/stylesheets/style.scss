@@ -169,7 +169,7 @@ transition: all 0.4s ease-in-out; }
 span.box-icon { float: right; margin-top: -71px; }
 
 /* Page styles */
-.page { background: #fff; padding: 12px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); margin-bottom: 28px; }
+.page { background: #fff; padding: 12px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); margin-bottom: 28px; min-height: 230px; }
 .page.dark { background: #adeee5 url(/assets/dark.png) repeat-x; box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2); }
 .page.dark p, .page.dark label, .page.dark ul li, .page.dark ol li, .page.dark td { color: #2a2a2a }
 .page .container { width: 100%; }
