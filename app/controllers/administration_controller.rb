@@ -2,7 +2,7 @@ class AdministrationController < ApplicationController
 
   layout 'administration'
 
-  USER, PASSWORD = 'qwe', 'qwe'
+  USER, PASSWORD = 'polyadmin!', 'p@ssw0rd'
 
   before_filter :authenticate
 
