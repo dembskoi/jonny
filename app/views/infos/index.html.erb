@@ -1,0 +1,17 @@
+<h1>Contact Info</h1>
+
+<table class='table table-hover'>
+  <tr>
+    <th>Phone numbers</th>
+    <th>Location</th>
+    <th>Edit</th>
+  </tr>
+
+<% @infos.each do |info| %>
+  <tr>
+    <td><%= info.phone_number %></td>
+    <td><%= info.location %></td>
+    <td><%= link_to 'Edit', edit_info_path(info) %></td>
+  </tr>
+<% end %>
+</table>

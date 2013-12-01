@@ -1,5 +1,6 @@
 Jonny::Application.routes.draw do
 
+  resources :infos, only: [:index, :edit, :update]
   resources :doctors
   resources :specialties
   resources :service_prices
