@@ -100,3 +100,20 @@
 
 </body>
 </html>
+<script type="text/javascript">
+  $(window).resize(function(){
+    $("#content").css("min-height", function(){
+        return $(window).height() -
+            $("header").height() -
+            $("#top").height() -
+            $("#breadcrumb").height() -
+            $("#frame").height() -
+            ($("#frame").outerHeight(true) - $("#frame").height()) -
+            ($("#breadcrumb").outerHeight(true) - $("#breadcrumb").height()) -
+            ($("#content").outerHeight(true) - $("#content").height()) -
+            ($("footer").outerHeight(true) - $("footer").height()) -
+            $("footer").height() ;
+    });
+  })
+  $(window).resize();
+</script>
