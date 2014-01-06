@@ -71,7 +71,23 @@
       </div><!--/.navbar -->
       <!-- End Main Menu -->
 
-    <%= yield :carousel %>
+      <% if action_name == 'index' %>
+      <!-- Home page Carousel -->
+      <div class="frame">
+        <div id="myCarousel" class="carousel slide">
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item"><%= image_tag("slider/homeopathy.jpg") %></div>
+            <div class="item"><%= image_tag("slider/forest.jpg") %></div>
+          </div><!--/.carousel-inner -->
+
+          <!-- Carousel nav -->
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+        </div><!--/#myCarousel -->
+      </div><!--/.frame -->
+      <!-- End Home page Carousel -->
+      <% end %>
 
     </div><!--/.container -->
   </section><!--/#top -->
@@ -100,6 +116,8 @@
 
 </body>
 </html>
+
+<% unless action_name == 'index' %>
 <script type="text/javascript">
   $(window).resize(function(){
     $("#content").css("min-height", function(){
@@ -109,6 +127,8 @@
             $("#breadcrumb").height() -
             $("#frame").height() -
             ($("#frame").outerHeight(true) - $("#frame").height()) -
+            $(".frame").height() -
+            ($(".frame").outerHeight(true) - $(".frame").height()) -
             ($("#breadcrumb").outerHeight(true) - $("#breadcrumb").height()) -
             ($("#content").outerHeight(true) - $("#content").height()) -
             ($("footer").outerHeight(true) - $("footer").height()) -
@@ -117,3 +137,20 @@
   })
   $(window).resize();
 </script>
+<% else %>
+  <script type="text/javascript">
+    $(window).resize(function(){
+      $("#content").css("min-height", function(){
+          return $(window).height() -
+              $("header").height() -
+              325 -
+              $("#breadcrumb").height() -
+              ($("#breadcrumb").outerHeight(true) - $("#breadcrumb").height()) -
+              ($("#content").outerHeight(true) - $("#content").height()) -
+              ($("footer").outerHeight(true) - $("footer").height()) -
+              $("footer").height() ;
+      });
+    })
+    $(window).resize();
+  </script>
+<% end %>
